@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/style.css";
 import ChildComponent from "./ChildComponent";
 class Practice9 extends React.Component {
   // practice for passing props to child and from child to anther child
@@ -39,7 +40,7 @@ class Practice9 extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>{this.state.username}</h1>
         <h1>dislike{this.state.dislikecount}</h1>
         <h1>like{this.state.likecount}</h1>
@@ -49,9 +50,16 @@ class Practice9 extends React.Component {
         </h1>
         <br />
 
-        <button onClick={this.handleClicklike}>like it</button>
+        <button className="btn btn-danger" onClick={this.handleClicklike}>
+          like it
+        </button>
         <br />
-        <button onClick={this.handleClickdislike}>dislike it</button>
+        <button
+          className="btn btn-info btn-lg"
+          onClick={this.handleClickdislike}
+        >
+          dislike it
+        </button>
         <br />
         <ChildComponent count1={this.state} />
         {/* if to send one propertu  */}
